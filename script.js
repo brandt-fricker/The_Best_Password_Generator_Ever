@@ -15,7 +15,7 @@ function writePassword() {
 
   var passLength = prompt("Enter a number for how long you would like your password to be. It is recommended that the length be no less than 8 and no more than 128")
 
-  while (passLength < 8 || passLength > 128 && (typeof passLength !== 'number')) {
+  while (passLength < 8 || passLength > 128 || (passLength % 2 !== 1 && passLength % 2 !== 0)) {
     var checker = prompt("Quit being cheeky and pick a number between 8 and 128")
     if (checker >= 8 && checker <= 128) {
       passLength = checker;
